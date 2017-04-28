@@ -6,8 +6,11 @@ import './App.css';
 class App extends Component {
   state = {totale:0}
   quantitaCambiata(amount){
-    this.setState({totale:this.state.totale + amount})
-  }
+    this.setState({
+      totale:parseFloat((this.state.totale + amount).toFixed(2))
+  })
+}
+
   render() {
     return (
       <div className="App">
